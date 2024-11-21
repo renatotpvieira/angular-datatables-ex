@@ -1,0 +1,27 @@
+<p>api-table works!</p>
+<div class="table-responsive">
+  <table
+    datatable
+    [dtOptions]="dtOptions"
+    class="table table-striped table-hover table-bordered table-primary align-middle"
+  >
+    <thead class="table-light">
+      <caption>
+        Table Name
+      </caption>
+      <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr class="table-primary" *ngFor="let item of productsList">
+        <td scope="row">{{ item.title }}</td>
+        <td scope="row">
+          {{ item.reviews[0].comment }}
+        </td>
+      </tr>
+    </tbody>
+    <tfoot></tfoot>
+  </table>
+</div>
